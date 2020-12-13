@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="Title.uss" />
+    <ui:VisualElement name="RootContainer" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 1;">
+        <ui:VisualElement name="HeaderContainer">
+            <ui:Label text="ver1.0.0-preview" display-tooltip-when-elided="true" name="Version" class="text_0 lt" />
+            <ui:Label text="UserId : 10378426348" display-tooltip-when-elided="true" name="UserId" class="text_0 rt" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LogoContainer">
+            <ui:VisualElement name="ProductLogo" />
+            <ui:Button text="TAP TO START&#10;" display-tooltip-when-elided="true" name="BtnTapToStart" class="btn_0" />
+        </ui:VisualElement>
+        <ui:VisualElement name="FooterContainer">
+            <ui:Label text="2020(C)ohbashunsuke" display-tooltip-when-elided="true" name="Copyright" class="text_0 lb" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

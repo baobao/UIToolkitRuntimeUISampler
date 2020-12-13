@@ -1,0 +1,85 @@
+#HeaderContainer {
+    top: 0;
+    height: 100px;
+}
+
+.lt {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+}
+
+.rt {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+
+.lb {
+    left: 14px;
+    position: absolute;
+    bottom: 14px;
+}
+
+.text_0 {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+#FooterContainer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    right: 0;
+    left: 0;
+}
+
+#ProductLogo {
+    background-image: url('/Assets/Images/Logo.png');
+    height: 258px;
+    width: 604px;
+    -unity-text-align: upper-left;
+}
+
+#LogoContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#BtnTapToStart {
+    top: auto;
+    width: 302px;
+    height: 80px;
+    position: absolute;
+    display: flex;
+    bottom: 22%;
+    font-size: 26px;
+    opacity: 1;
+    background-image: url('/Assets/Images/button-base-0.png');
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-left: 10;
+    -unity-slice-top: 10;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    color: rgb(210, 210, 210);
+}
+
+.btn_0 {
+}
+
+.btn_0:hover {
+    opacity: 0.28;
+}
+
+#RootContainer {
+}
