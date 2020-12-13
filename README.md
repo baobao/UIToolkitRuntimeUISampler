@@ -1,4 +1,4 @@
-# UIToolkitTestApp
+# UIToolkitRuntimeUISampler
 
 This is a sample project that uses the UI Toolkit as the runtime UI.
 
