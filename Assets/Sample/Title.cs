@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -35,27 +34,27 @@ public class Title : MonoBehaviour
         _tapToStart.clicked += () => Hide();
     }
 
-    public async Task Show()
+    public void Show()
     {
-        await Task.Delay(1000);
-        MyTween.ShowX(_userId);
-        MyTween.ShowX(_version);
-        MyTween.ShowX(_copyright);
-
-        await Task.Delay(500);
-
-        MyTween.ShowAlpha(_productLogo, false, 1.2f, Ease.OutSine);
-
-        await Task.Delay(1000);
-
-        MyTween.ShowAlpha(_tapToStart, false, 1f);
+        DOTween.Sequence()
+            .AppendInterval(1f)
+            .AppendCallback(() =>
+            {
+                MyTween.ShowX(_userId);
+                MyTween.ShowX(_version);
+                MyTween.ShowX(_copyright);
+            })
+            .AppendInterval(0.5f)
+            .AppendCallback(() => MyTween.ShowAlpha(_productLogo, false, 1.2f, Ease.OutSine))
+            .AppendInterval(1f)
+            .AppendCallback(() => MyTween.ShowAlpha(_tapToStart, false, 1f))
+            .Play();
     }
 
-    public async Task Hide()
+    public void Hide()
     {
-        MyTween.HideAlpha(_rootContainer, false, 0.8f);
-        await Task.Delay(8000);
-        gameObject.SetActive(false);
+        MyTween.HideAlpha(_rootContainer, false, 0.8f)
+            .OnComplete(() => gameObject.SetActive(false));
     }
 
 
